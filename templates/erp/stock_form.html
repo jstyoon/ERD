@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h2>{{ product.name }} 재고 추가</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="quantity">추가 수량</label>
+      <input type="number" class="form-control" id="quantity" name="quantity" required>
+    </div>
+    <button type="submit" class="btn btn-primary">추가</button>
+  </form>
+{% endblock %}
